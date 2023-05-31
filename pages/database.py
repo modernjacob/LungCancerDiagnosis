@@ -34,7 +34,7 @@ def clear_db():
         "CHEST_PAIN",
         "DIAGNOSIS"
     ]
-    with open('project_files/data/database.csv', 'w') as file:
+    with open('data/database.csv', 'w') as file:
         writer = csv.writer(file)
         writer.writerow(columns)
 
