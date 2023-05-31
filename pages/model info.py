@@ -14,7 +14,7 @@ st.subheader("This model is a deep learning neural network \
              various symptoms and health information.")
 st.write('')
 st.subheader('Diagnosis Neural Network', anchor='')
-st.image('images/ann_nn.png')
+st.image('ann_nn.png')
 st.write('')
 
 # MODEL PERFORMANCE METRICS
@@ -54,7 +54,7 @@ st.divider()
 
 # ORIGINAL DATASET
 st.subheader('Original Dataset')
-ds = pd.read_csv('project_files/data/survey_lung_cancer.csv')
+ds = pd.read_csv('data/survey_lung_cancer.csv')
 st.dataframe(ds)
 st.text('- 1: No')
 st.text('- 2: Yes')
