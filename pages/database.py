@@ -10,7 +10,7 @@ st.set_page_config(
 st.title("Database")
 
 # get database
-database = pd.read_csv('project_files/data/database.csv')
+database = pd.read_csv('data/database.csv')
 
 st.write(database, use_container_width=True)
 
