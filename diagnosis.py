@@ -120,7 +120,7 @@ def preprocess(data, db):
     ]
 
     # Load scaler
-    with open('project_files/scaler.pkl', 'rb') as file:
+    with open('scaler.pkl', 'rb') as file:
         scaler = pickle.load(file)
 
     # Scale new data
@@ -140,10 +140,10 @@ def preprocess(data, db):
 @st.cache_data
 def diagnosis(data, db):
 
-    database = pd.read_csv("project_files/data/database.csv")
+    database = pd.read_csv("data/database.csv")
 
     # load diagnosis model and make prediction
-    model = load_model("project_files/lcd_model.h5")
+    model = load_model("lcd_model.h5")
     diagnosis = model.predict(data)
     
     # diagnosis condition
@@ -162,7 +162,7 @@ def diagnosis(data, db):
     add_data = pd.DataFrame(db)
 
     append_db = pd.concat([database, add_data])
-    append_db.to_csv('project_files/data/database.csv', index=False)
+    append_db.to_csv('data/database.csv', index=False)
 
 
 ######
